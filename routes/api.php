@@ -13,4 +13,3 @@ use Illuminate\Support\Facades\Route;
 Route::apiResource('V1/brands', BrandController::class);
 
 
-Route::post('V1/user', [BrandController::class, 'add']);

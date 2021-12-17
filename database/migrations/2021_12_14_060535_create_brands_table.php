@@ -19,28 +19,20 @@ class CreateBrandsTable extends Migration
 
             $table->string('title_fa');
             $table->string('info_fa');
-            $table->string('ostan_fa');
+            $table->string('province_fa');
             $table->string('country_fa');
             $table->string('continent_fa');
 
-            $table->string('image');
-            $table->double('rate');
-            $table->integer('yer');
-            $table->boolean('made_in_iran');
-
-
+            $table->string('image')->nullable();
+            $table->integer('rate')->nullable();
+            $table->integer('year')->nullable();
+            $table->integer('made_in_iran');
 
             $table->string('title_en');
-            $table->string('info_en');
-            $table->string('ostan_en');
-            $table->string('country_en');
-            $table->string('continent_en');
-
-
-            $table->boolean('isUpdated');
-
-
-
+            $table->string('info_en')->nullable();
+            $table->string('province_en')->nullable();
+            $table->string('country_en')->nullable();
+            $table->string('continent_en')->nullable();
 
 
             $table->softDeletes();
