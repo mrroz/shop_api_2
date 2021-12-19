@@ -15,6 +15,10 @@ class CreateBrandsTable extends Migration
     public function up()
     {
         Schema::create('brands', function (Blueprint $table) {
+
+            $table->string('delete')->nullable();
+
+
             $table->id();
 
             $table->string('title_fa');
@@ -50,3 +54,6 @@ class CreateBrandsTable extends Migration
         Schema::dropIfExists('brands');
     }
 }
+
+
+

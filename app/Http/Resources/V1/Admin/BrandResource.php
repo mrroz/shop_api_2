@@ -20,6 +20,9 @@ class BrandResource extends JsonResource
         $updated_at= $this->updated_at;
         $now = Carbon::now();
 
+
+        $deleted =$this->deleted_at?'yes' : 'No' ;
+
         $test= $this->updated_at->toDateTimeString();
         $updateTime = $this->updated_at ==$now?0 :$this->updated_at;
         $lastDays =$now->diffInDays($updateTime);
@@ -29,6 +32,7 @@ class BrandResource extends JsonResource
         $isUpdated = $created_at->diffInSeconds($updated_at)==0? 'no' : 'yes';
 
         return [
+
 
             'id'=> strval($this->id),
             'title_fa'=> $this->title_fa,
